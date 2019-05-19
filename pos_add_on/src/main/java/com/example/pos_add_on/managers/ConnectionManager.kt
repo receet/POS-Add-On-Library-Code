@@ -32,7 +32,7 @@ class ConnectionManager(context: Context): WebSocketListener() {
 
 
         private var socket: WebSocket? = null
-        private val NORMAL_CLOSURE_STATUS = 1000
+        private val normalClosureStatus = 1000
     private lateinit var connectionManagerActionsInterface : ConnectionManagerActionsInterface
 
     private val sharedPreference: SharedPreference = SharedPreference(context)
@@ -79,7 +79,7 @@ class ConnectionManager(context: Context): WebSocketListener() {
             }
             ReceiptDelivered.code  -> {
                 connectionManagerActionsInterface.receiptDelivered()
-                webSocket?.close(NORMAL_CLOSURE_STATUS,"finished")
+                webSocket?.close(normalClosureStatus,"finished")
             }
             OrderCreatedSuccessfully.code -> {
                 connectionManagerActionsInterface.orderDeliveredSuccessfully(receivedJSONObject.optInt(ORDER_ID_KEY), receivedJSONObject.optInt(RECEIPT_ID_KEY))
@@ -91,12 +91,12 @@ class ConnectionManager(context: Context): WebSocketListener() {
             }
             AuthorizationFailed.code -> {
                 connectionManagerActionsInterface.webSocketAuthorizeFailed()
-                 webSocket?.close(NORMAL_CLOSURE_STATUS,"finished")
+                 webSocket?.close(normalClosureStatus,"finished")
             }
             UnkownAction.code  -> TODO()
             TimeOut.code  -> {
                 connectionManagerActionsInterface.webSocketDidTimeOut()
-                webSocket?.close(NORMAL_CLOSURE_STATUS,"finished")
+                webSocket?.close(normalClosureStatus,"finished")
             }
             OrderCreationError.code  ->  connectionManagerActionsInterface.connectionManagerDidEncounterError( "", "")
         }
