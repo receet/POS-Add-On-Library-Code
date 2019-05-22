@@ -18,7 +18,6 @@
 -keep public class * {
     public protected *;
 }
--keep lib
 
 # Preserve all .class method names.
 
