@@ -1,0 +1,264 @@
+# compiler: R8
+# compiler_version: 1.4.94
+# min_api: 1
+com.example.pos_add_on.BuildConfig -> com.example.pos_add_on.BuildConfig:
+    1:1:void <init>():6:6 -> <init>
+com.example.pos_add_on.GlobalKeys -> com.example.pos_add_on.GlobalKeys:
+    1:1:void <init>():3:3 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion -> com.example.pos_add_on.GlobalKeys$Companion:
+    1:1:void <init>():5:5 -> <init>
+    2:2:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):5:5 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion$DateFormats -> com.example.pos_add_on.GlobalKeys$Companion$DateFormats:
+    1:1:void <clinit>():13:13 -> <clinit>
+    1:1:void <init>():13:13 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion$Messages -> com.example.pos_add_on.GlobalKeys$Companion$Messages:
+    1:1:void <clinit>():28:28 -> <clinit>
+    1:1:void <init>():28:28 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion$ParameterKeys -> com.example.pos_add_on.GlobalKeys$Companion$ParameterKeys:
+    1:1:void <clinit>():17:17 -> <clinit>
+    1:1:void <init>():17:17 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion$UserDefaultsKeys -> com.example.pos_add_on.GlobalKeys$Companion$UserDefaultsKeys:
+    1:1:void <clinit>():6:6 -> <clinit>
+    1:1:void <init>():6:6 -> <init>
+com.example.pos_add_on.GlobalKeys$Companion$WebService -> com.example.pos_add_on.GlobalKeys$Companion$WebService:
+    1:1:void <clinit>():34:34 -> <clinit>
+    1:1:void <init>():34:34 -> <init>
+com.example.pos_add_on.SharedPreference -> com.example.pos_add_on.SharedPreference:
+    android.content.SharedPreferences sharedPref -> b
+    java.lang.String PREFS_NAME -> a
+    1:3:void <init>(android.content.Context):6:8 -> <init>
+    1:1:void clearSharedPreference():57:57 -> clearSharedPreference
+    2:3:void clearSharedPreference():61:62 -> clearSharedPreference
+    1:1:android.content.SharedPreferences getSharedPref():8:8 -> getSharedPref
+    1:1:boolean getValueBoolien(java.lang.String,boolean):51:51 -> getValueBoolien
+    1:1:int getValueInt(java.lang.String):46:46 -> getValueInt
+    1:1:java.lang.String getValueString(java.lang.String):39:39 -> getValueString
+    1:1:void removeValue(java.lang.String):67:67 -> removeValue
+    2:3:void removeValue(java.lang.String):69:70 -> removeValue
+    1:1:void save(java.lang.String,java.lang.String):13:13 -> save
+    2:2:void save(java.lang.String,java.lang.String):15:15 -> save
+    3:3:void save(java.lang.String,java.lang.String):17:17 -> save
+    4:4:void save(java.lang.String,int):21:21 -> save
+    5:5:void save(java.lang.String,int):23:23 -> save
+    6:6:void save(java.lang.String,int):25:25 -> save
+    7:7:void save(java.lang.String,boolean):30:30 -> save
+    8:8:void save(java.lang.String,boolean):32:32 -> save
+    9:9:void save(java.lang.String,boolean):34:34 -> save
+com.example.pos_add_on.SingletonHolder -> com.example.pos_add_on.SingletonHolder:
+    java.lang.Object instance -> b
+    kotlin.jvm.functions.Function1 creator -> a
+    1:2:void <init>(kotlin.jvm.functions.Function1):3:4 -> <init>
+    1:1:java.lang.Object getInstance(java.lang.Object):8:8 -> getInstance
+    2:3:java.lang.Object getInstance(java.lang.Object):13:14 -> getInstance
+    4:6:java.lang.Object getInstance(java.lang.Object):18:20 -> getInstance
+    7:7:java.lang.Object getInstance(java.lang.Object):13:13 -> getInstance
+com.example.pos_add_on.managers.BluetoothManager -> com.example.pos_add_on.managers.BluetoothManager:
+    1:1:void <init>():6:6 -> <init>
+    1:1:boolean isBluetoothEnabled():19:19 -> isBluetoothEnabled
+    2:2:boolean isBluetoothEnabled():21:21 -> isBluetoothEnabled
+    1:1:boolean isBluetoothSupported():9:9 -> isBluetoothSupported
+    1:1:boolean turnOnBluetooth():33:33 -> turnOnBluetooth
+    2:2:boolean turnOnBluetooth():35:35 -> turnOnBluetooth
+com.example.pos_add_on.managers.ConnectionManager -> com.example.pos_add_on.managers.ConnectionManager:
+    com.example.pos_add_on.interfaces.ConnectionManagerActionsInterface connectionManagerActionsInterface -> c
+    okhttp3.WebSocket socket -> a
+    com.example.pos_add_on.SharedPreference sharedPreference -> d
+    int normalClosureStatus -> b
+    java.lang.String dateFormat -> e
+    1:1:void <init>(android.content.Context):28:28 -> <init>
+    2:2:void <init>(android.content.Context):35:35 -> <init>
+    3:4:void <init>(android.content.Context):38:39 -> <init>
+    1:5:void connectToWebSocket():45:49 -> connectToWebSocket
+    6:6:void connectToWebSocket():51:51 -> connectToWebSocket
+    1:1:void getConnectionManagerActionsInterface(com.example.pos_add_on.interfaces.ConnectionManagerActionsInterface):42:42 -> getConnectionManagerActionsInterface
+    1:2:void onClosed(okhttp3.WebSocket,int,java.lang.String):114:115 -> onClosed
+    1:1:void onClosing(okhttp3.WebSocket,int,java.lang.String):110:110 -> onClosing
+    1:1:void onFailure(okhttp3.WebSocket,java.lang.Throwable,okhttp3.Response):119:119 -> onFailure
+    1:8:void onMessage(okhttp3.WebSocket,java.lang.String):71:78 -> onMessage
+    9:11:void onMessage(okhttp3.WebSocket,java.lang.String):80:82 -> onMessage
+    12:13:void onMessage(okhttp3.WebSocket,java.lang.String):84:85 -> onMessage
+    14:17:void onMessage(okhttp3.WebSocket,java.lang.String):87:90 -> onMessage
+    18:20:void onMessage(okhttp3.WebSocket,java.lang.String):92:94 -> onMessage
+    21:24:void onMessage(okhttp3.WebSocket,java.lang.String):96:99 -> onMessage
+    25:25:void onMessage(okhttp3.WebSocket,java.lang.String):101:101 -> onMessage
+    26:26:void onMessage(okhttp3.WebSocket,java.lang.String):96:96 -> onMessage
+    27:27:void onMessage(okhttp3.WebSocket,okio.ByteString):106:106 -> onMessage
+    1:1:void onOpen(okhttp3.WebSocket,okhttp3.Response):67:67 -> onOpen
+    1:8:void sendOrderToCloud(org.json.JSONObject):55:62 -> sendOrderToCloud
+com.example.pos_add_on.managers.ConnectionManager$Companion -> com.example.pos_add_on.managers.ConnectionManager$Companion:
+    1:1:void <init>():31:31 -> <init>
+    2:2:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):31:31 -> <init>
+com.example.pos_add_on.managers.ConnectionManager$Companion$1 -> com.example.pos_add_on.managers.a:
+    com.example.pos_add_on.managers.ConnectionManager$Companion$1 INSTANCE -> a
+    1:1:com.example.pos_add_on.managers.ConnectionManager invoke(android.content.Context):31:31 -> a
+    1:1:java.lang.Object invoke(java.lang.Object):31:31 -> invoke
+com.example.pos_add_on.managers.ConnectionManager$WebSocketActions -> com.example.pos_add_on.managers.ConnectionManager$WebSocketActions:
+    com.example.pos_add_on.managers.ConnectionManager$WebSocketActions[] $VALUES -> a
+    int code -> b
+    1:3:void <clinit>():137:139 -> <clinit>
+    1:1:void <init>(java.lang.String,int,int):136:136 -> <init>
+    1:1:int getCode():136:136 -> getCode
+com.example.pos_add_on.managers.ConnectionManager$WebSocketResponses -> com.example.pos_add_on.managers.ConnectionManager$WebSocketResponses:
+    int code -> b
+    com.example.pos_add_on.managers.ConnectionManager$WebSocketResponses[] $VALUES -> a
+    1:8:void <clinit>():125:132 -> <clinit>
+    1:1:void <init>(java.lang.String,int,int):124:124 -> <init>
+    1:1:int getCode():124:124 -> getCode
+com.example.pos_add_on.managers.PosManager -> com.example.pos_add_on.managers.PosManager:
+    android.app.Dialog popUpDialog -> f
+    com.example.pos_add_on.managers.ConnectionManager connectionManager -> b
+    android.os.CountDownTimer timer -> e
+    android.content.Context context -> i
+    int requestCodeBluetoothOn -> g
+    com.example.pos_add_on.managers.VirtualBeaconManager virtualBeaconManager -> c
+    boolean isEnabled -> h
+    com.example.pos_add_on.SharedPreference sharedPreference -> a
+    org.json.JSONObject digitalOrder -> d
+    1:1:void <init>(android.content.Context):33:33 -> <init>
+    2:5:void <init>(android.content.Context):36:39 -> <init>
+    6:6:void <init>(android.content.Context):42:42 -> <init>
+    7:9:void <init>(android.content.Context):57:59 -> <init>
+    1:3:boolean isNetworkAvailable():90:92 -> a
+    4:4:void turnOnBluetooth(android.app.Activity):97:97 -> a
+    5:5:void turnOnBluetooth(android.app.Activity):99:99 -> a
+    6:6:void turnOnBluetooth(android.app.Activity):101:101 -> a
+    7:12:void showAuthCodeAlert(java.lang.String,java.lang.String):105:110 -> a
+    13:14:void showAuthCodeAlert(java.lang.String,java.lang.String):113:114 -> a
+    15:15:void showAuthCodeAlert(java.lang.String,java.lang.String):116:116 -> a
+    16:16:void showAuthCodeAlert(java.lang.String,java.lang.String):115:115 -> a
+    17:17:void showAuthCodeAlert(java.lang.String,java.lang.String):120:120 -> a
+    18:18:void showAuthCodeAlert(java.lang.String,java.lang.String):123:123 -> a
+    1:1:android.content.Context access$getContext$p(com.example.pos_add_on.managers.PosManager):33:33 -> access$getContext$p
+    1:1:android.app.Dialog access$getPopUpDialog$p(com.example.pos_add_on.managers.PosManager):33:33 -> access$getPopUpDialog$p
+    1:1:com.example.pos_add_on.SharedPreference access$getSharedPreference$p(com.example.pos_add_on.managers.PosManager):33:33 -> access$getSharedPreference$p
+    1:1:android.os.CountDownTimer access$getTimer$p(com.example.pos_add_on.managers.PosManager):33:33 -> access$getTimer$p
+    1:1:void access$setPopUpDialog$p(com.example.pos_add_on.managers.PosManager,android.app.Dialog):33:33 -> access$setPopUpDialog$p
+    1:1:void access$setTimer$p(com.example.pos_add_on.managers.PosManager,android.os.CountDownTimer):33:33 -> access$setTimer$p
+    1:4:void resetPosState():127:130 -> b
+    1:1:void cancelButtonPressed():134:134 -> cancelButtonPressed
+    1:3:void connectionManagerDidEncounterError(java.lang.String,java.lang.String):203:205 -> connectionManagerDidEncounterError
+    4:4:void connectionManagerDidEncounterError(java.lang.String,java.lang.String):208:208 -> connectionManagerDidEncounterError
+    5:5:void connectionManagerDidEncounterError(java.lang.String,java.lang.String):206:206 -> connectionManagerDidEncounterError
+    6:6:void connectionManagerDidEncounterError(java.lang.String,java.lang.String):211:211 -> connectionManagerDidEncounterError
+    1:3:void createOrder(org.json.JSONObject):63:65 -> createOrder
+    4:5:void createOrder(org.json.JSONObject):68:69 -> createOrder
+    6:6:void createOrder(org.json.JSONObject):73:73 -> createOrder
+    1:1:boolean isEnabled():46:46 -> isEnabled
+    1:1:void orderDeliveredSuccessfully(int,int):170:170 -> orderDeliveredSuccessfully
+    1:3:void posDidTimeOut():233:235 -> posDidTimeOut
+    4:4:void posDidTimeOut():238:238 -> posDidTimeOut
+    5:5:void posDidTimeOut():236:236 -> posDidTimeOut
+    6:6:void posDidTimeOut():241:241 -> posDidTimeOut
+    1:2:void receiptDelivered():177:178 -> receiptDelivered
+    1:2:void resetAuthKey():79:80 -> resetAuthKey
+    3:3:void resetAuthKey():83:83 -> resetAuthKey
+    1:2:void setEnabled(boolean):48:49 -> setEnabled
+    3:4:void setEnabled(boolean):51:52 -> setEnabled
+    1:3:void virtualBeaconManagerDidEncounterError(java.lang.String,java.lang.String):138:140 -> virtualBeaconManagerDidEncounterError
+    4:4:void virtualBeaconManagerDidEncounterError(java.lang.String,java.lang.String):143:143 -> virtualBeaconManagerDidEncounterError
+    5:5:void virtualBeaconManagerDidEncounterError(java.lang.String,java.lang.String):141:141 -> virtualBeaconManagerDidEncounterError
+    6:6:void virtualBeaconManagerDidEncounterError(java.lang.String,java.lang.String):146:146 -> virtualBeaconManagerDidEncounterError
+    1:5:void virtualBeaconManagerDidStartAdvertising():150:154 -> virtualBeaconManagerDidStartAdvertising
+    6:7:void virtualBeaconManagerDidStartAdvertising():161:162 -> virtualBeaconManagerDidStartAdvertising
+    8:8:void virtualBeaconManagerDidStartAdvertising():165:165 -> virtualBeaconManagerDidStartAdvertising
+    9:9:void virtualBeaconManagerDidStartAdvertising():161:161 -> virtualBeaconManagerDidStartAdvertising
+    1:1:void webSocketAuthorizeFailed():219:219 -> webSocketAuthorizeFailed
+    1:1:void webSocketDidAuthorize():215:215 -> webSocketDidAuthorize
+    1:1:void webSocketDidDisconnect():199:199 -> webSocketDidDisconnect
+    1:1:void webSocketDidTimeOut():245:245 -> webSocketDidTimeOut
+com.example.pos_add_on.managers.PosManager$Companion -> com.example.pos_add_on.managers.PosManager$Companion:
+    1:1:void <init>():44:44 -> <init>
+    2:2:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):44:44 -> <init>
+com.example.pos_add_on.managers.PosManager$Companion$1 -> com.example.pos_add_on.managers.b:
+    com.example.pos_add_on.managers.PosManager$Companion$1 INSTANCE -> a
+    1:1:com.example.pos_add_on.managers.PosManager invoke(android.content.Context):44:44 -> a
+    1:1:java.lang.Object invoke(java.lang.Object):44:44 -> invoke
+com.example.pos_add_on.managers.PosManager$connectionManagerDidEncounterError$1 -> com.example.pos_add_on.managers.c:
+    com.example.pos_add_on.managers.PosManager$connectionManagerDidEncounterError$1 INSTANCE -> a
+com.example.pos_add_on.managers.PosManager$posDidTimeOut$1 -> com.example.pos_add_on.managers.d:
+    com.example.pos_add_on.managers.PosManager$posDidTimeOut$1 INSTANCE -> a
+com.example.pos_add_on.managers.PosManager$receiptDelivered$1 -> com.example.pos_add_on.managers.e:
+    com.example.pos_add_on.managers.PosManager this$0 -> a
+    1:1:void run():179:179 -> run
+    2:2:void run():192:192 -> run
+com.example.pos_add_on.managers.PosManager$receiptDelivered$1$1 -> com.example.pos_add_on.managers.PosManager$receiptDelivered$1$1:
+    com.example.pos_add_on.managers.PosManager$receiptDelivered$1 this$0 -> a
+    1:1:void <init>(com.example.pos_add_on.managers.PosManager$receiptDelivered$1,long,long):179:179 -> <init>
+    1:1:void onFinish():189:189 -> onFinish
+    1:5:void onTick(long):181:185 -> onTick
+com.example.pos_add_on.managers.PosManager$showAuthCodeAlert$1 -> com.example.pos_add_on.managers.f:
+    com.example.pos_add_on.managers.PosManager this$0 -> a
+    android.widget.EditText $input -> b
+    1:2:void onClick(android.content.DialogInterface,int):117:118 -> onClick
+    3:3:void onClick(android.content.DialogInterface,int):117:117 -> onClick
+com.example.pos_add_on.managers.PosManager$showAuthCodeAlert$2 -> com.example.pos_add_on.managers.g:
+    com.example.pos_add_on.managers.PosManager$showAuthCodeAlert$2 INSTANCE -> a
+com.example.pos_add_on.managers.PosManager$virtualBeaconManagerDidEncounterError$1 -> com.example.pos_add_on.managers.h:
+    com.example.pos_add_on.managers.PosManager$virtualBeaconManagerDidEncounterError$1 INSTANCE -> a
+com.example.pos_add_on.managers.PosManager$virtualBeaconManagerDidStartAdvertising$1 -> com.example.pos_add_on.managers.i:
+    com.example.pos_add_on.managers.PosManager this$0 -> a
+    1:5:void onDismiss(android.content.DialogInterface):155:159 -> onDismiss
+com.example.pos_add_on.managers.PosManager$virtualBeaconManagerDidStartAdvertising$2 -> com.example.pos_add_on.managers.j:
+    com.example.pos_add_on.managers.PosManager this$0 -> a
+    1:1:void onClick(android.view.View):163:163 -> onClick
+com.example.pos_add_on.managers.PosManager$webSocketAuthorizeFailed$1 -> com.example.pos_add_on.managers.l:
+    com.example.pos_add_on.managers.PosManager this$0 -> a
+    1:3:void run():220:222 -> run
+    4:4:void run():225:225 -> run
+    5:5:void run():223:223 -> run
+    6:6:void run():228:228 -> run
+com.example.pos_add_on.managers.PosManager$webSocketAuthorizeFailed$1$1 -> com.example.pos_add_on.managers.k:
+    com.example.pos_add_on.managers.PosManager$webSocketAuthorizeFailed$1$1 INSTANCE -> a
+com.example.pos_add_on.managers.VirtualBeaconManager -> com.example.pos_add_on.managers.VirtualBeaconManager:
+    com.example.pos_add_on.managers.VirtualBeaconManager$callback$1 callback -> g
+    android.bluetooth.BluetoothGattServer bluetoothGattServer -> e
+    com.example.pos_add_on.managers.VirtualBeaconManager$advertisingCallback$1 advertisingCallback -> h
+    android.content.Context context -> i
+    java.util.UUID characteristicUUID -> b
+    java.util.UUID ServiceUUID -> a
+    com.example.pos_add_on.SharedPreference sharedPreference -> c
+    com.example.pos_add_on.interfaces.VirtualBeaconActionsInterface virtualBeaconActionsInterface -> f
+    android.bluetooth.BluetoothManager bluetoothManager -> d
+    1:1:void <init>(android.content.Context):18:18 -> <init>
+    2:3:void <init>(android.content.Context):20:21 -> <init>
+    4:4:void <init>(android.content.Context):23:23 -> <init>
+    5:5:void <init>(android.content.Context):51:51 -> <init>
+    6:6:void <init>(android.content.Context):81:81 -> <init>
+    7:7:void <init>(android.content.Context,kotlin.jvm.internal.DefaultConstructorMarker):18:18 -> <init>
+    1:1:void startBLEAdvertising():89:89 -> a
+    2:6:void startBLEAdvertising():91:95 -> a
+    7:7:void startBLEAdvertising():99:99 -> a
+    8:12:void startBLEAdvertising():103:107 -> a
+    13:14:void startBLEAdvertising():110:111 -> a
+    1:1:android.bluetooth.BluetoothGattServer access$getBluetoothGattServer$p(com.example.pos_add_on.managers.VirtualBeaconManager):18:18 -> access$getBluetoothGattServer$p
+    1:1:com.example.pos_add_on.interfaces.VirtualBeaconActionsInterface access$getVirtualBeaconActionsInterface$p(com.example.pos_add_on.managers.VirtualBeaconManager):18:18 -> access$getVirtualBeaconActionsInterface$p
+    1:1:void access$setBluetoothGattServer$p(com.example.pos_add_on.managers.VirtualBeaconManager,android.bluetooth.BluetoothGattServer):18:18 -> access$setBluetoothGattServer$p
+    1:1:void access$setVirtualBeaconActionsInterface$p(com.example.pos_add_on.managers.VirtualBeaconManager,com.example.pos_add_on.interfaces.VirtualBeaconActionsInterface):18:18 -> access$setVirtualBeaconActionsInterface$p
+    1:2:void startGATTServer():60:61 -> b
+    3:3:void startGATTServer():63:63 -> b
+    4:4:void startGATTServer():67:67 -> b
+    5:5:void startGATTServer():73:73 -> b
+    6:7:void startGATTServer():76:77 -> b
+    8:8:void startGATTServer():60:60 -> b
+    1:1:com.example.pos_add_on.SharedPreference getSharedPreference():22:22 -> getSharedPreference
+    1:1:void getVirtualBeaconActionsInterface(com.example.pos_add_on.interfaces.VirtualBeaconActionsInterface):32:32 -> getVirtualBeaconActionsInterface
+    1:2:void startTransmitting():36:37 -> startTransmitting
+    3:4:void startTransmitting():39:40 -> startTransmitting
+    1:4:void stopTransmitting():44:47 -> stopTransmitting
+com.example.pos_add_on.managers.VirtualBeaconManager$Companion -> com.example.pos_add_on.managers.VirtualBeaconManager$Companion:
+    1:1:void <init>():29:29 -> <init>
+    2:2:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):29:29 -> <init>
+com.example.pos_add_on.managers.VirtualBeaconManager$Companion$1 -> com.example.pos_add_on.managers.m:
+    com.example.pos_add_on.managers.VirtualBeaconManager$Companion$1 INSTANCE -> a
+    1:1:com.example.pos_add_on.managers.VirtualBeaconManager invoke(android.content.Context):29:29 -> a
+    1:1:java.lang.Object invoke(java.lang.Object):29:29 -> invoke
+com.example.pos_add_on.managers.VirtualBeaconManager$advertisingCallback$1 -> com.example.pos_add_on.managers.VirtualBeaconManager$advertisingCallback$1:
+    1:1:void <init>():81:81 -> <init>
+    1:2:void onStartFailure(int):83:84 -> onStartFailure
+com.example.pos_add_on.managers.VirtualBeaconManager$callback$1 -> com.example.pos_add_on.managers.VirtualBeaconManager$callback$1:
+    com.example.pos_add_on.managers.VirtualBeaconManager this$0 -> a
+    1:1:void <init>(com.example.pos_add_on.managers.VirtualBeaconManager):51:51 -> <init>
+    1:4:void onCharacteristicReadRequest(android.bluetooth.BluetoothDevice,int,int,android.bluetooth.BluetoothGattCharacteristic):53:56 -> onCharacteristicReadRequest
+com.example.pos_add_on.managers.VirtualBeaconManager$startBLEAdvertising$1 -> com.example.pos_add_on.managers.n:
+    com.example.pos_add_on.managers.VirtualBeaconManager this$0 -> a
+    1:1:void run():112:112 -> run
