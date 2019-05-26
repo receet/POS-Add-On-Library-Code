@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('receet_pos_add_on-release.aar'))
