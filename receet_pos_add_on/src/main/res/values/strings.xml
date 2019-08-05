@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PosAddOn</string>
+    <string name="receet_service_UUID" >0000fffe-0000-1000-8000-00805f9b34fb</string>
+    <string name="receet_beacon_ID_characteristic_UUID">B1428E10-9894-4D5E-BB39-9136E124CA10</string>
+    <string name="next_sale_in">Next Sale in %1$d</string>
+    <string name="send_digital_order">Send Digital Order</string>
+    <string name="receet">Receet</string>
+    <string name="reset_auth_key">Reset Auth Key</string>
+</resources>

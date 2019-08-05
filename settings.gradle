@@ -1,0 +1,1 @@
+include ':app', ':receet_pos_add_on'
