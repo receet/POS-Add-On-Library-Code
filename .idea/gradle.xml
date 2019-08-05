@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/pos_add_on" />
+            <option value="$PROJECT_DIR$/receet_pos_add_on" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
