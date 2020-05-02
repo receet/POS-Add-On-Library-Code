@@ -8,7 +8,7 @@ ReceetPOSAddOn is an easy to integrate with add-on which can be installed on any
 Add Gradle dependency into your app's build.config
 ```
  dependencies {
-    implementation 'com.receet:receet_pos_add_on:{latest_version}'
+    implementation 'com.receet:receet_pos_add_on:1.0.5'
 }
 ```
 ## Getting Started
