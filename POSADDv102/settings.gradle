@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='POSADDv1.0.2'
