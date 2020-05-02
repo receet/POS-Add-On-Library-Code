@@ -129,7 +129,11 @@ To send a digital receipt you prepare the purchase order as the following format
 4- you send this dictionary to the Receet Point of Sale manager 
 
 ```kotlin
- posManager.createOrder(order)// send the digital order To Receet POS
+ // send the digital order To Receet POS and a callback to be exectued once the order is completed with the qr code bitmap
+  posManager.createOrder(order,callback = {qrCode -> 
+     //handle the QR code here
+     Log.d("qrCodeValue",qrCode.toString())
+   })
 ```
 
 
