@@ -1,7 +1,9 @@
 package com.example.posaddon
 
+import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.example.receet_pos_add_on.managers.PosManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,7 +16,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.sendOrder -> {
-                posManager.createOrder(createOrder())
+                posManager.createOrder(createOrder(),callback = {qrCode ->
+                    //handle the QR code here
+                    Log.d("qrCodeValue",qrCode.toString())
+                })
             }
             R.id.resetAuthKey -> {
                 posManager.resetAuthKey()

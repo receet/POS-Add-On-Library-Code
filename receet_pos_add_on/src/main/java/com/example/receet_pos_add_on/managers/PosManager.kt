@@ -20,15 +20,22 @@ import com.example.receet_pos_add_on.interfaces.ConnectionManagerActionsInterfac
 import com.example.receet_pos_add_on.interfaces.PopUpViewActionsInterface
 import com.example.receet_pos_add_on.interfaces.VirtualBeaconActionsInterface
 import android.net.ConnectivityManager
+import android.util.DisplayMetrics
 import com.example.receet_pos_add_on.GlobalKeys.Companion.Messages.AUTH_PROMPT_MESSAGE
 import com.example.receet_pos_add_on.GlobalKeys.Companion.Messages.AUTH_PROMPT_OK_BUTTON_TITLE
 import com.example.receet_pos_add_on.GlobalKeys.Companion.Messages.AUTH_PROMPT_PLACEHOLDER
 import com.example.receet_pos_add_on.GlobalKeys.Companion.Messages.AUTH_PROMPT_TITLE
 import com.example.receet_pos_add_on.GlobalKeys.Companion.UserDefaultsKeys.AUTHORIZATION_CODE_KEY
 import com.example.receet_pos_add_on.GlobalKeys.Companion.UserDefaultsKeys.RECEET_INTEGRATION_KEY
-import com.example.receet_pos_add_on.R
 import com.example.receet_pos_add_on.SharedPreference
 import com.example.receet_pos_add_on.SingletonHolder
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.MultiFormatWriter
+import com.google.zxing.WriterException
+import com.journeyapps.barcodescanner.BarcodeEncoder
+import android.view.WindowManager
+import android.graphics.Bitmap
+import com.example.receet_pos_add_on.R
 
 
 class PosManager(private val context: Context) : ConnectionManagerActionsInterface, VirtualBeaconActionsInterface,
@@ -41,6 +48,10 @@ class PosManager(private val context: Context) : ConnectionManagerActionsInterfa
     private var timer : CountDownTimer? = null
     private var popUpDialog : Dialog? = null
     private val requestCodeBluetoothOn = 1313
+    private var dimension = 200
+    private var qrCode: Bitmap? = null
+    private var callback: (Bitmap?) -> Unit = {}
+
 
     companion object : SingletonHolder<PosManager, Context>(::PosManager)
 
@@ -58,9 +69,11 @@ class PosManager(private val context: Context) : ConnectionManagerActionsInterfa
         isEnabled = sharedPreference.getValueBoolien(RECEET_INTEGRATION_KEY,false)
         virtualBeaconManager.getVirtualBeaconActionsInterface(this)
         connectionManager.getConnectionManagerActionsInterface(this)
+        calculateQRCodeDimension()
     }
 
-    fun createOrder(order : JSONObject) {
+    fun createOrder(order : JSONObject, callback: (Bitmap?) -> Unit) {
+        this.callback = callback
         if(isNetworkAvailable()) {
             if((BluetoothManager().isBluetoothSupported) && (!BluetoothManager().isBluetoothEnabled)) {
                 turnOnBluetooth(context as Activity)
@@ -131,6 +144,32 @@ class PosManager(private val context: Context) : ConnectionManagerActionsInterfa
             popUpDialog?.dismiss()
         }
     }
+
+    private fun generateQRCode(encodedContent : String) {
+        val multiFormatWriter = MultiFormatWriter()
+        try {
+            val bitMatrix = multiFormatWriter.encode(encodedContent, BarcodeFormat.QR_CODE,dimension,dimension)
+            val barcodeEncoder = BarcodeEncoder()
+            val bitmap = barcodeEncoder.createBitmap(bitMatrix)
+            this.qrCode = bitmap
+        } catch (e: WriterException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun calculateQRCodeDimension() {
+        val displayMetrics = DisplayMetrics()
+        val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        windowManager.defaultDisplay?.getMetrics(displayMetrics)
+        val width = displayMetrics.widthPixels
+        val height = displayMetrics.heightPixels
+        dimension = maxOf(width/4.0, height/4.0).toInt()
+    }
+
+    private fun getQRCode() : Bitmap? {
+        return this.qrCode
+    }
+
     override fun cancelButtonPressed() {
         resetPosState()
     }
@@ -167,8 +206,9 @@ class PosManager(private val context: Context) : ConnectionManagerActionsInterfa
 
     }
 
-    override fun orderDeliveredSuccessfully(orderID: Int, receiptID: Int) {
-        virtualBeaconManager.startTransmitting()
+    override fun orderDeliveredSuccessfully(orderID: Int, receiptID: Int, genericReceiptID: String) {
+        generateQRCode(genericReceiptID)
+        callback(qrCode)
     }
 
     override fun orderNotDelivered() {
